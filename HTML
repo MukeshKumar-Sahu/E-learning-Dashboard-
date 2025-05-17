@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HCL Tech E-Learning Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .welcome-section {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .tab-button {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .tab-button:hover {
+            background-color: #0055a5;
+        }
+        .topic-section {
+            display: none;
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            color: #003366;
+        }
+        @media (max-width: 768px) {
+            .topic-section {
+                width: 95%;
+            }
+        }
+</style>
+</head>
+<body>
+<header class="welcome-section">
+<h1>HCL Tech E-Learning Platform</h1>
+<p>Empowering Learning, Enhancing Skills</p>
+</header>
+ 
+    <div class="tabs">
+<button class="tab-button" onclick="openTab('java')">Java</button>
+<button class="tab-button" onclick="openTab('html')">HTML</button>
+<button class="tab-button" onclick="openTab('nutanix')">Nutanix</button>
+<button class="tab-button" onclick="openTab('vmware')">VMware</button>
+</div>
+ 
+    <main>
+<section class="topic-section" id="java">
+<h2>Java Programming</h2>
+<p>Learn the fundamentals and advanced concepts of Java.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eIrMbAQSU34" frameborder="0" allowfullscreen></iframe>
+<p><a href="#">Take Java Quiz</a></p>
+</section>
+ 
+        <section class="topic-section" id="html">
+<h2>HTML & Web Development</h2>
+<p>Understand the building blocks of web development.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UB1O30fR-EE" frameborder="0" allowfullscreen></iframe>
+<p><a href="#">Take HTML Quiz</a></p>
+</section>
+ 
+        <section class="topic-section" id="nutanix">
+<h2>Nutanix Cloud Solutions</h2>
+<p>Master hyper-converged infrastructure and cloud computing.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n222kSWpoNE?si=_6l1AT4V4MiagW3w" frameborder="0" allowfullscreen></iframe>
+<p><a href="#">Take Nutanix Quiz</a></p>
+</section>
+ 
+        <section class="topic-section" id="vmware">
+<h2>VMware Virtualization</h2>
+<p>Explore virtualization and cloud infrastructure solutions.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kTO810vbF_E?si=REBwnhJUNSAteeoa" frameborder="0" allowfullscreen></iframe>
+<p><a href="#">Take VMware Quiz</a></p>
+</section>
+</main>
+ 
+    <script>
+        function openTab(topic) {
+            var sections = document.querySelectorAll('.topic-section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(topic).style.display = 'block';
+        }
+</script>
+</body>
+</html>
